@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+:root{
+  --primary-color:#11b03b;
+  --background-color:#00ff447a;
+}
+
+
+/* 
+====================================
+            NavBar
+====================================
+ */
+
+
+.navigation{
+  background-color: white;
+  border-radius: 30px;
+}
+
+.navbar-nav .nav-link{
+  font-family: "Roboto", sans-serif;
+  font-size: .95rem;
+  font-weight:500;
+  text-transform: capitalize;
+  letter-spacing:1px;
+}
+.navigation .logo-name{
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: cursive;
+ }
+
+.menu-btn.navbar-toggler{
+  border:2px solid transparent;
+  height: 30px;
+  width: 35px;
+  padding-left: 7px;
+  transition: all 0.2s ease-in;
+}
+.menu-btn:hover{
+  scale:1.2
+}
+.menu-btn.navbar-toggler i{
+  font-size: 20px;
+}
+.menu-btn.navbar-toggler:focus{
+  outline: unset;
+  box-shadow: none;
+}
+
+.navigation .logo-name:hover,
+.navbar-nav .nav-link:hover 
+{
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link:active{
+  color:green;
+}
+
+/* 
+====================================
+            Hero section
+====================================
+ */
+
+.hero{
+     padding-block:13rem 9rem;
+}
+
+.right{
+ & span{
+   color:var(--primary-color);
+ }
+
+ & .btn{
+   color:white;
+   background-color: var(--primary-color);
+ }
+ & .btn:hover{
+   background-color: white;
+   color:var(--primary-color);
+   border:1px solid var(--primary-color);
+ }
+
+ & h1{
+   font-size: 6.6rem;
+   font-weight: 600;
+   text-transform: uppercase;
+ }
+ & h3{
+   font-size: 1.2rem;
+   font-weight: 400;
+ }
+ p{
+   font-size: 2rem;
+   font-weight: 500;
+ }
+}
+
+.shape{
+  background-color: var(--primary-color);
+  height: 400px;
+  width: 400px;
+  animation: flow 3s infinite ease-in;
+  overflow: hidden;
+}
+
+.shape img{
+  height: 95%;
+  width: 95%;
+  object-fit: cover;
+}
+
+@keyframes flow {
+  0%{
+    border-radius: 49% 51% 49% 51% / 50% 52% 48% 50% 
+  }
+  25%{
+    border-radius: 60% 40% 57% 43% / 50% 52% 48% 50% 
+  }
+  50%{
+    border-radius: 58% 42% 57% 43% / 41% 58% 42% 59% 
+  }
+  75%{
+    border-radius: 45% 55% 51% 49% / 35% 47% 53% 65% 
+  }
+  100%{
+    border-radius: 49% 51% 49% 51% / 50% 52% 48% 50% 
+  }
+}
+
+
+ /* 
+====================================
+            About Section
+====================================
+ */
+
+.about{
+  text-align: center;  
+  background-color:var(--background-color);
+
+  & .about-container{
+    width:70%;
+    border-radius: 20px;
+    padding:8rem 3rem;
+  }
+  & h2{
+    font-size:2.5rem;
+  }
+  & p{
+    color:#000;
+    font-size: 17px;
+    letter-spacing:.5px;
+    line-height: 30px;
+  }
+
+}
+
+ /* 
+====================================
+            Services
+====================================
+ */
+
+.service-container{
+  padding:6rem;
+}
+.card{
+  border-bottom-left-radius: 25px !important;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 25px !important; 
+  border-top-left-radius: 0px !important; 
+  transition: all 300ms ease;
+
+  & img{
+    border:1px solid var(--primary-color);
+    border-radius:50% ;
+    padding:10px;
+  }
+  & h5{
+    color:var(--primary-color)
+  }
+}
+
+.card:hover{
+  scale:1.11;
+}
+
+
+ /* 
+====================================
+            Contact 
+====================================
+ */
+.contact-container{
+   background-color:var(--background-color);
+   padding-block: 6rem;
+ }
+
+form input{
+  width: 40%;
+  font-size: 15px;
+  padding:10px ;
+  border-radius: 25px;
+
+  border: 1.5px solid black;
+ }
+
+form input:focus{
+  border:none;
+  outline: 2px solid green;
+ }
+ form textarea{
+  width: 80%;
+  font-size: 15px;
+  padding:10px ;
+  border-radius: 25px;
+  resize: none;
+  border: 1.5px solid black;
+ }
+
+ form textarea:focus{
+  border:none;
+  outline: 2px solid green;
+ }
+ form .submit-btn{
+  background-color:var(--primary-color);
+  color: white;
+  padding:10px 25px;
+ }
+
+ form .submit-btn:hover{
+  background-color:transparent;
+  border: 1px solid green;
+ }
+
+ /* 
+====================================
+            Contact 
+====================================
+ */
+
+ footer{
+  background-color: var(--primary-color);
+ }
+
+
+ @media (max-width:960px){
+  .hero{
+    padding-block:4rem;
+  }
+  .about-container{
+    width:90%;
+    border-radius: 20px;
+    padding:5rem 0rem !important;
+  }
+ }
+ @media (max-width:750px){
+  .right{
+    & h1{
+      font-size: 4.5rem;
+    }
+  }
+ }
